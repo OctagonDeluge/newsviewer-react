@@ -1,0 +1,44 @@
+.news {
+    width: 1260px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*background: #f3f3f3;*/
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.tools {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tools input[type="image"] {
+    width: 30px;
+    height: 29px;
+    background: rgba(229, 229, 229, 0);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="image"] {
+    width: 29px;
+    height: 29px;
+}
+
+.search input[type="text"] {
+    width: 400px;
+    height: 25px;
+}
+
+.search select {
+    height: 31px;
+}

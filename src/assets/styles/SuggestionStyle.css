@@ -1,0 +1,24 @@
+.suggestion {
+    cursor: pointer;
+    background: #e5e5e5;
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+    margin-bottom: 15px;
+}
+
+.suggestion-container {
+    width: 150px;
+    display: grid;
+    margin-left: 20px;
+}
+
+.suggestion-container h4 {
+    width: 350px;
+}
+
+.suggestion-container article {
+    width: 350px;
+    height: 90px;
+    overflow: hidden;
+}

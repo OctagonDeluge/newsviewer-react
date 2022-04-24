@@ -1,0 +1,41 @@
+.article {
+    display: flex;
+    flex-direction: column;
+}
+
+.subArticle {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    width: 1000px;
+}
+
+.subArticle h1 {
+    width: 900px;
+    height: auto;
+}
+
+.subArticle article {
+    width: 900px;
+    height: auto;
+    font-size: 24px;
+}
+
+.subArticle img {
+    border-radius: 15px;
+    width: 850px;
+    height: 500px;
+}
+
+.subArticle a {
+    font-size: 20px;
+    width: 80px;
+}
+
+.subArticle button {
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 40px;
+    width: 160px;
+}

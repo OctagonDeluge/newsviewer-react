@@ -1,0 +1,40 @@
+.card {
+    cursor: pointer;
+    background: #e5e5e5;
+    border-radius: 10px;
+    height: 315px;
+    width: 400px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.container {
+    width: 350px;
+    display: grid;
+    margin-left: 20px;
+}
+
+.container article {
+    height: 45px;
+    width: 340px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+.container h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 45px;
+    overflow: hidden;
+}
+
+.container img {
+    margin-top: 5px;
+    width: 320px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.container time {
+    font-size: 12px;
+}
