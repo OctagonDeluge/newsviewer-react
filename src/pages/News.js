@@ -33,7 +33,7 @@ function News() {
     }, [find])
 
     const setDefault = () => {
-        if (!sort) {
+        if(!sort) {
             axios
                 .get("https://api.spaceflightnewsapi.net/v3/articles?_limit=12" +
                     "&_start=" + (count - 1) * 12)
@@ -59,7 +59,7 @@ function News() {
 
     const setSearch = () => {
         if (type === "title") {
-            if (!sort) {
+            if(!sort) {
                 axios
                     .get(
                         "https://api.spaceflightnewsapi.net/v3/articles?title_contains=" + keyWord +
@@ -101,47 +101,24 @@ function News() {
                     })
             }
         } else {
-            if (!sort) {
-                axios
-                    .get(
-                        "https://api.spaceflightnewsapi.net/v3/articles?summary_contains=" + keyWord +
-                        "&_start=" + (count - 1) * 12 +
-                        "&_limit=12"
-                    )
-                    .then((res) => {
-                        setNews(res.data);
-                    })
+            axios
+                .get(
+                    "https://api.spaceflightnewsapi.net/v3/articles?summary_contains=" + keyWord +
+                    "&_start=" + (count - 1) * 12 +
+                    "&_limit=12"
+                )
+                .then((res) => {
+                    setNews(res.data);
+                })
 
-                axios
-                    .get(
-                        "https://api.spaceflightnewsapi.net/v3/articles?summary_contains=" + keyWord +
-                        "&_limit=-1"
-                    )
-                    .then(res => {
-                        setTotalCount(res.data.length);
-                    })
-            } else {
-                axios
-                    .get(
-                        "https://api.spaceflightnewsapi.net/v3/articles?summary_contains=" + keyWord +
-                        "&_start=" + (count - 1) * 12 +
-                        "&_sort=publishedAt" +
-                        "&_limit=12"
-                    )
-                    .then((res) => {
-                        setNews(res.data);
-                    })
-
-                axios
-                    .get(
-                        "https://api.spaceflightnewsapi.net/v3/articles?summary_contains=" + keyWord +
-                        "&_sort=publishedAt" +
-                        "&_limit=-1"
-                    )
-                    .then(res => {
-                        setTotalCount(res.data.length);
-                    })
-            }
+            axios
+                .get(
+                    "https://api.spaceflightnewsapi.net/v3/articles?summary_contains=" + keyWord +
+                    "&_limit=-1"
+                )
+                .then(res => {
+                    setTotalCount(res.data.length);
+                })
         }
     }
 
@@ -153,7 +130,7 @@ function News() {
                        src="https://iconape.com/wp-content/png_logo_vector/sort-amount-up.png"
                        alt="sort_by_date"
                        onClick={() => {
-                           if (!sort) {
+                           if(!sort) {
                                setSort(true)
                            } else {
                                setSort(false);
