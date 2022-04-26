@@ -1,0 +1,22 @@
+@media (max-width: 540px) {
+    .card {
+        width: 95%;
+        height: auto;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .container h4 {
+        width: 95%;
+    }
+
+    .container article {
+        width: 95%;
+    }
+
+    .container img {
+        width: 95%;
+    }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/styles/SuggestionStyle.css"
+import "../assets/mediaQuery/SuggestionMedia.css"
 import {useNavigate, useParams} from "react-router-dom";
 
 function Suggestion({suggestion}) {

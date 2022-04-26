@@ -1,13 +1,16 @@
 import React from "react";
 import "../assets/styles/NewsCardStyle.css"
-import {useParams} from "react-router-dom";
+import "../assets/mediaQuery/NewsCardMedia.css"
+import {useNavigate, useParams} from "react-router-dom";
 
 function NewsCard({news}) {
     let {count} = useParams();
     let date = new Date(news.publishedAt);
+    const navigate = useNavigate();
 
     const handleClick = () => {
-        window.open('/news/'+ count + "/" + news.id);
+        //window.open('/news/'+ count + "/" + news.id);
+        navigate('/news/'+ count + "/" + news.id);
     }
 
     return (

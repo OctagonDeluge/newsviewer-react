@@ -1,0 +1,17 @@
+@media (max-width: 540px) {
+    .suggestion {
+        width: 95%;
+    }
+
+    .suggestion-container {
+        width: 95%;
+    }
+
+    .suggestion-container h4 {
+        width: 95%;
+    }
+
+    .suggestion-container article {
+        width: 95%;
+    }
+}

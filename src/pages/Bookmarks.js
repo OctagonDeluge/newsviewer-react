@@ -3,7 +3,8 @@ import axios from "axios";
 import NewsCard from "../components/NewsCard";
 import "../assets/styles/BookmarksPageStyle.css"
 import Pagination from "../components/Pagination";
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
+import Header from "../components/Header";
 
 function Bookmarks() {
     const [bookmarks, setBookmarks] = useState([]);
@@ -37,11 +38,7 @@ function Bookmarks() {
     return (
         <div>
             <div className="bookmarks">
-                <div className="bookmarks-header">
-                    <img src="https://www.svgrepo.com/show/246172/space.svg" alt="svgPic"/>
-                    <Link to="/news/1">Home</Link>
-                    <Link to="/about">About</Link>
-                </div>
+                <Header />
                 <div className="bookmarks-container">
                     {
                         bookmarks.map((bookmark) => (

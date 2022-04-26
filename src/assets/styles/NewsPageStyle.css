@@ -1,9 +1,8 @@
 .news {
-    width: 1260px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    /*background: #f3f3f3;*/
+    justify-content: center;
 }
 
 .center {
@@ -35,7 +34,7 @@
 }
 
 .search input[type="text"] {
-    width: 400px;
+    width: 370px;
     height: 25px;
 }
 

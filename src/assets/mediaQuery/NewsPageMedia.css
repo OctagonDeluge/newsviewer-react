@@ -1,0 +1,19 @@
+@media (max-width: 540px) {
+
+    .tools {
+        margin-bottom: 40px;
+        margin-top: 40px;
+        flex-direction: column;
+    }
+
+    .search {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .search input[type="text"] {
+        width: 80%;
+    }
+}
+

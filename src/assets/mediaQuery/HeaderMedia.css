@@ -1,0 +1,30 @@
+@media (max-width: 960px) {
+    .header {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 720px) {
+    .header {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 540px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        height: 150px;
+        align-items: center;
+    }
+
+    .header a {
+        margin:0;
+    }
+
+    .header img {
+        margin: 0;
+    }
+}

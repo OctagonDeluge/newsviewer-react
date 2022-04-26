@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.article-container {
+    display: flex;
+}
+
 .subArticle {
     margin-top: 25px;
     display: flex;
@@ -38,4 +42,8 @@
     margin-top: 10px;
     height: 40px;
     width: 160px;
+}
+
+.suggestions {
+    margin-top: 50px;
 }

@@ -1,0 +1,42 @@
+@media (max-width: 1380px) {
+    .article-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subArticle {
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+    }
+}
+
+@media (max-width: 960px) {
+    .subArticle {
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .subArticle h1 {
+        width: 90%;
+    }
+
+    .subArticle article {
+        width: 90%;
+    }
+
+    .subArticle img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 540px) {
+    .suggestions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import axios from "axios";
 import "../assets/styles/ArticleStyle.css"
+import "../assets/mediaQuery/ArticleMedia.css"
 import Suggestion from "../components/Suggestion";
 import Header from "../components/Header";
 
@@ -61,7 +62,7 @@ function Article() {
     return (
         <div className="article">
             <Header/>
-            <div style={{display: "flex"}}>
+            <div className="article-container">
                 <div className="subArticle">
                     <h1>{article.title}</h1>
                     <article>{article.summary}</article>
@@ -69,7 +70,7 @@ function Article() {
                     <button onClick={handleClick}>Add to bookmarks</button>
                     <a href={article.url}>Source</a>
                 </div>
-                <div style={{marginTop: 50}}>
+                <div className="suggestions">
                     {
                         news.map(news => (
                             <Suggestion key={news.id} suggestion={news}/>

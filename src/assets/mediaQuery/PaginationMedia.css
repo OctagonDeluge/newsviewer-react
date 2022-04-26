@@ -1,0 +1,7 @@
+@media (max-width: 540px) {
+    .pagination li {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 0;
+    }
+}
