@@ -8,6 +8,7 @@ import Header from "../components/Header";
 
 function Article() {
     let temp = [];
+    let test = [];
     let {id} = useParams();
     const [article, setArticle] = useState({
         id: "",
@@ -19,6 +20,7 @@ function Article() {
     const [news, setNews] = useState([]);
 
     useEffect(() => {
+        console.log(JSON.parse(localStorage.getItem("bookmarks")).includes(Number(id)))
         axios
             .get("https://api.spaceflightnewsapi.net/v3/articles/" + id)
             .then((res) => {
@@ -67,6 +69,9 @@ function Article() {
                     <h1>{article.title}</h1>
                     <article>{article.summary}</article>
                     <img src={article.imageUrl} alt="newsImage"/>
+                    {
+                        JSON.parse(localStorage.getItem("bookmarks")).includes(Number(id)) ? console.log(1) : console.log(2)
+                    }
                     <button onClick={handleClick}>Add to bookmarks</button>
                     <a href={article.url}>Source</a>
                 </div>

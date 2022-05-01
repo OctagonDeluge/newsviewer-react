@@ -22,17 +22,19 @@ function Bookmarks() {
     });
 
     useEffect(() => {
-        axios
-            .get("https://api.spaceflightnewsapi.net/v3/articles?" + query.replaceAll('.', '')
-                + "&_limit=12&_start=" + (page - 1) * 12)
-            .then(res => {
-                setBookmarks(res.data);
-            })
-        axios
-            .get("https://api.spaceflightnewsapi.net/v3/articles?" + query.replaceAll('.', ''))
-            .then(res => {
-                setTotalCount(res.data.length);
-            })
+        if(query !== "") {
+            axios
+                .get("https://api.spaceflightnewsapi.net/v3/articles?" + query.replaceAll('.', '')
+                    + "&_limit=12&_start=" + (page - 1) * 12)
+                .then(res => {
+                    setBookmarks(res.data);
+                })
+            axios
+                .get("https://api.spaceflightnewsapi.net/v3/articles?" + query.replaceAll('.', ''))
+                .then(res => {
+                    setTotalCount(res.data.length);
+                })
+        }
     }, [page])
 
     return (
